@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DailySchedule">
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="104.0" minHeight="5.0" prefHeight="104.0" />
+        <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="39.0" />
+        <RowConstraints maxHeight="255.0" minHeight="10.0" prefHeight="253.0" />
+        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="75.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="850.0" minWidth="10.0" prefWidth="850.0" />
+    </columnConstraints>
+    <children>
+        <TableView fx:id="appointmentTable" prefHeight="253.0" prefWidth="828.0" GridPane.rowIndex="4">
+            <columns>
+                <TableColumn fx:id="appointmentIdCol" prefWidth="122.0" text="Appointment ID" />
+                <TableColumn fx:id="titleCol" prefWidth="82.0" text="Title" />
+                <TableColumn fx:id="typeCol" prefWidth="81.0" text="Type" />
+                <TableColumn fx:id="descriptionCol" prefWidth="82.0" text="Description" />
+                <TableColumn fx:id="startTimeCol" prefWidth="184.0" text="Start Time" />
+                <TableColumn fx:id="endTimeCol" prefWidth="197.0" text="End Time" />
+                <TableColumn fx:id="customerApptIdCol" prefWidth="100.0" text="Customer Id" />
+            </columns>
+        </TableView>
+        <Label prefHeight="19.0" prefWidth="97.0" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="weekdayComboBox" onAction="#onFilterByWeekday" prefWidth="150.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets right="500.0" />
+            </GridPane.margin></ComboBox>
+        <Label prefHeight="26.0" prefWidth="155.0" text="Filter by Weekday:" GridPane.rowIndex="2">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+            <GridPane.margin>
+                <Insets left="25.0" />
+            </GridPane.margin>
+        </Label>
+        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="63.0" text="Cancel" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets right="25.0" />
+            </GridPane.margin>
+        </Button>
+    </children>
+</GridPane>

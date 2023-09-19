@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.UpdateCustomer"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label layoutX="31.0" layoutY="47.0" text="Update Customer">
+        </Label>
+        <Label layoutX="40.0" layoutY="94.0" text="ID" />
+        <Label layoutX="40.0" layoutY="129.0" text="Name" />
+        <Label layoutX="40.0" layoutY="163.0" text="Address" />
+        <Label layoutX="40.0" layoutY="198.0" text="Postal Code" />
+        <Label layoutX="40.0" layoutY="232.0" text="Phone" />
+        <TextField fx:id="idTF" disable="true" editable="false" layoutX="129.0" layoutY="90.0" prefHeight="26.0" prefWidth="107.0" promptText="AutoGen - Disabled" />
+        <TextField fx:id="nameTF" layoutX="129.0" layoutY="125.0" prefHeight="26.0" prefWidth="107.0" />
+        <TextField fx:id="addressTF" layoutX="129.0" layoutY="159.0" prefHeight="26.0" prefWidth="107.0" />
+        <TextField fx:id="postalCodeTF" layoutX="129.0" layoutY="194.0" prefHeight="26.0" prefWidth="107.0" />
+        <TextField fx:id="phoneTF" layoutX="129.0" layoutY="228.0" prefHeight="26.0" prefWidth="107.0" />
+        <Label layoutX="305.0" layoutY="94.0" text="Country" />
+        <Button layoutX="240.0" layoutY="314.0" mnemonicParsing="false" onAction="#onSaveUpdatedCustomer" text="Save" />
+        <Button fx:id="cancelUpdate" layoutX="300.0" layoutY="314.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+        <Label fx:id="errorLabel" alignment="TOP_LEFT" layoutX="7.0" layoutY="306.0" prefHeight="89.0" prefWidth="214.0" />
+        <ComboBox fx:id="countryComboBox" layoutX="251.0" layoutY="126.0" onAction="#onCountrySelected" prefWidth="150.0" />
+        <Label fx:id="firstLevelLabel" layoutX="461.0" layoutY="94.0" prefHeight="17.0" prefWidth="70.0" />
+        <ComboBox fx:id="divisionComboBox" layoutX="421.0" layoutY="126.0" prefWidth="150.0" />
+    </children>
+
+</AnchorPane>

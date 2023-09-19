@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerAppointments">
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="104.0" minHeight="5.0" prefHeight="104.0" />
+        <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="84.0" />
+      <RowConstraints maxHeight="255.0" minHeight="10.0" prefHeight="81.0" />
+      <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="70.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="850.0" minWidth="10.0" prefWidth="613.0" />
+      <ColumnConstraints maxWidth="850.0" minWidth="10.0" prefWidth="613.0" />
+    </columnConstraints>
+    <children>
+        <GridPane fx:id="noFilter1" prefHeight="75.0" prefWidth="817.0" GridPane.rowIndex="5">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="10.0" prefWidth="409.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="8.0" prefWidth="127.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="85.0" />
+            </columnConstraints>
+        </GridPane>
+          <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="63.0" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+              <GridPane.margin>
+                  <Insets right="10.0" />
+              </GridPane.margin>
+          </Button>
+          <Label prefHeight="19.0" prefWidth="97.0" text="Filter by Type" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+              <font>
+                  <Font name="System Bold" size="13.0" />
+              </font>
+          </Label>
+      <Label prefHeight="19.0" prefWidth="102.0" text="Filter by Month" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="customerComboBox" onAction="#onFilterByCustomer" prefWidth="150.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <Label prefHeight="26.0" prefWidth="162.0" text="Filter by Customer:" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin>
+      </Label>
+      <ComboBox fx:id="monthComboBox" onAction="#onFilterByMonth" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <ComboBox fx:id="typeComboBox" onAction="#onFilterByType" prefWidth="150.0" GridPane.rowIndex="3" />
+      <Label prefHeight="19.0" prefWidth="169.0" text="Number of Appointments:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label prefHeight="19.0" prefWidth="169.0" text="Number of Appointments:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="typeApptCountLabel" prefHeight="19.0" prefWidth="169.0" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="monthApptCountLabel" prefHeight="19.0" prefWidth="169.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+    </children>
+</GridPane>
